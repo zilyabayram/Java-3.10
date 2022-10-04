@@ -30,12 +30,12 @@ public class MovieManagerTest {
         manager.add(movie7);
         manager.add(movie8);
         manager.add(movie9);
-        manager.add(movie10);
-        manager.add(movie11);
+
     }
 
     @Test
     public void showLast10() {
+        manager.add(movie10);
 
         MoviesToWatch[] expected = {movie10, movie9, movie8, movie7, movie6, movie5, movie4, movie3, movie2, movie1};
         MoviesToWatch[] actual = manager.findLast();
@@ -54,6 +54,8 @@ public class MovieManagerTest {
 
     @Test
     public void showLastIfMoviesMoreThan10() {
+        manager.add(movie10);
+        manager.add(movie11);
 
         MoviesToWatch[] expected = {movie11, movie10, movie9, movie8, movie7, movie6, movie5, movie4, movie3, movie2};
         MoviesToWatch[] actual = manager.findLast();
