@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class MovieManagerTest {
 
-    private MovieManager manager = new MovieManager();
+    private final MovieManager manager = new MovieManager();
     MoviesToWatch movie1 = new MoviesToWatch(11, "Бладшот");
     MoviesToWatch movie2 = new MoviesToWatch(22, "Вперед");
     MoviesToWatch movie3 = new MoviesToWatch(33, "Отель Белград");
